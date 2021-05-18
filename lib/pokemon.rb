@@ -23,6 +23,7 @@ class Pokemon
       VALUES (?, ?, ?)
       SQL
       binding.pry
+    self.db.execute(sql, self.name, self.type, self.db)
     
   end
 end

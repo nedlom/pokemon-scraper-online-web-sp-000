@@ -40,9 +40,10 @@ class Pokemon
   
   def self.new_from_db(row)
     self.new(
-      row[1],
-      row[2],
-      row[0])
+      id: row[0],
+      name: row[1],
+      type: row[2],
+      db: row[3])
   end
   
 end

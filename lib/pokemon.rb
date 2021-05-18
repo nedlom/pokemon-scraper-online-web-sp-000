@@ -22,6 +22,8 @@ class Pokemon
       LIMIT 1
     SQL
     
+    x = db.execute(sql, id)
+    
     binding.pry
   end
   

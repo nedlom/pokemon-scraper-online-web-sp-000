@@ -34,7 +34,7 @@ class Pokemon
       SQL
       
     self.db.execute(sql, self.name, self.type)
-    x = self.id = self.db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
+    self.id = self.db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
   end
   
   def self.new_from_db(row)

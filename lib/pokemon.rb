@@ -10,8 +10,18 @@ class Pokemon
   end
   
   def self.save
+    pokemon = self.new(name, type, db)
+    pokemon.save
   end
   
   def self.find
+  end
+  
+  def save
+    sql = <<-SQL
+      INSERT INTO pokemon (name, type, db)
+      VALUES (?, ?, ?)
+      SQL
+    
   end
 end

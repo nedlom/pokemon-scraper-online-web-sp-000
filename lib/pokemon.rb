@@ -22,9 +22,9 @@ class Pokemon
       INSERT INTO pokemon (name, type)
       VALUES (?, ?)
       SQL
-      binding.pry
+      
     self.db.execute(sql, self.name, self.type)
-    self.id = self.db.execute("SELECT from_last_insertid")
-    
+    x = self.id = self.db.execute("SELECT last_insert_rowid() FROM pokemon")
+    binding.pry
   end
 end

@@ -10,7 +10,7 @@ class Pokemon
   end
   
   def self.save(name, type, db)
-    pokemon = self.new(name, type, db)
+    pokemon = self.new(name: name, type: type, db: db)
     pokemon.save
   end
   

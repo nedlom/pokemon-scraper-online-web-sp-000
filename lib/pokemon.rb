@@ -14,7 +14,14 @@ class Pokemon
     pokemon.save
   end
   
-  def self.find(a,b)
+  def self.find(id, db)
+    sql = <<-SQL
+      SELECT * 
+      FROM pokemon
+      WHERE id = ?
+      LIMIT 1
+    SQL
+    
     binding.pry
   end
   

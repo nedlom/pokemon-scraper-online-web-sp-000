@@ -22,7 +22,7 @@ class Pokemon
       LIMIT 1
     SQL
     
-    x = db.execute(sql, id)
+    row = db.execute(sql, id)[0]
     
     binding.pry
   end

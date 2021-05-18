@@ -14,7 +14,8 @@ class Pokemon
     pokemon.save
   end
   
-  def self.find
+  def self.find(a,b)
+    binding.pry
   end
   
   def save

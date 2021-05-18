@@ -23,6 +23,7 @@ class Pokemon
     SQL
     
     row = db.execute(sql, id)[0]
+    row << db
     
     binding.pry
   end
@@ -37,6 +38,11 @@ class Pokemon
     x = self.id = self.db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
   end
   
-  
+  def self.new_from_db(row)
+    self.new(
+      row[1],
+      row[2],
+      row[0])
+  end
   
 end

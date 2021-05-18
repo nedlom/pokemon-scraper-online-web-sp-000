@@ -12,5 +12,6 @@ class Pokemon
   def self.save
   end
   
-  def self.
+  def self.find
+  end
 end

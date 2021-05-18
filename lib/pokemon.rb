@@ -19,11 +19,12 @@ class Pokemon
   
   def save
     sql = <<-SQL
-      INSERT INTO pokemon (name, type, db)
-      VALUES (?, ?, ?)
+      INSERT INTO pokemon (name, type)
+      VALUES (?, ?)
       SQL
       binding.pry
-    self.db.execute(sql, self.name, self.type, self.db)
+    self.db.execute(sql, self.name, self.type)
+    self.id = self.db.execute("SELECT from_last_insertid")
     
   end
 end

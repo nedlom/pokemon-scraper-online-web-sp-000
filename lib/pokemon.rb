@@ -24,7 +24,7 @@ class Pokemon
       SQL
       
     self.db.execute(sql, self.name, self.type)
-    x = self.id = self.db.execute("SELECT last_insert_rowid() FROM pokemon")
-    binding.pry
+    x = self.id = self.db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
   end
+  
 end

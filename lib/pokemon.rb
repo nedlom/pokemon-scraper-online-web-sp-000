@@ -22,6 +22,7 @@ class Pokemon
       INSERT INTO pokemon (name, type, db)
       VALUES (?, ?, ?)
       SQL
+      binding.pry
     
   end
 end

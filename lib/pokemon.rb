@@ -24,8 +24,7 @@ class Pokemon
     
     row = db.execute(sql, id)[0]
     row << db
-    
-    binding.pry
+    self.new_from_db(row)
   end
   
   def save
